@@ -32,7 +32,7 @@ const SearchParams = () => {
     setBreed("");
 
     pet.breeds(animal).then(({ breeds: APIbreeds }) => {
-      const breedStrings = APIbreeds.map(({ name }) => name);
+      const breedStrings = breeds.map(({ name }) => name);
       setBreeds(breedStrings);
     }, console.error);
   }, [animal]);
